@@ -13,5 +13,5 @@ Settings
 
 - ``PROJECT_ROOT``: Root directory of the Pelican project. You should set this
   to ``os.path.dirname(os.path.abspath(__file__))``. I don't know if Pelican
-  offers in some for meta data, so let me know if that's the case and this
-  settings is not necessary.
+  offers this already in some meta data, so let me know if that's the case and
+  this settings is not necessary.
