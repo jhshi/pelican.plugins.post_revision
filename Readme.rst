@@ -2,8 +2,9 @@ Post Revision
 #############
 
 This Pelican plugin extracts the post's revision history from Git, and offer
-several ``article`` and ``page`` attributes.
-
+several ``article`` and ``page`` attributes. Please see more details and a
+working example `here
+<http://jhshi.me/2015/10/13/post-revision-plugin-for-pelican/index.html>`_.
 
 Settings
 ========
