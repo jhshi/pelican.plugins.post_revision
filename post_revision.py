@@ -1,4 +1,13 @@
+"""Post Revision Plugin for Pelican.
 
+This plugin read the Git commit hitory for each article or page file, and store
+the history as a meta data to the article or page object, so that templates can
+make use of this information to show post revision history.
+
+When this plugin is installed, the ``article`` and ``page`` object has an extra
+meta data named ``history``, which is a list of ``<date, msg>`` tuples in
+reverse order by date.
+"""
 import subprocess
 import dateutil
 
