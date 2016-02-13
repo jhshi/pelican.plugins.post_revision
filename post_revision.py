@@ -8,6 +8,7 @@ When this plugin is installed, the ``article`` and ``page`` object has an extra
 meta data named ``history``, which is a list of ``<date, msg>`` tuples in
 reverse order by date.
 """
+import sys
 import subprocess
 import dateutil
 
@@ -30,6 +31,7 @@ def generate_post_revision(generator):
     try:
       output = subprocess.check_output('git log --format="%%ai|%%s" %s'\
           % (path), shell=True)
+      output = output.decode() if sys.version_info[0] == 3 else output
       commits = []
       for line in output.split('\n'):
         line = line.strip()
