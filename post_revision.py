@@ -30,7 +30,7 @@ def generate_post_revision(generator):
       continue
     try:
       output = subprocess.check_output('git log --format="%%ai|%%s" %s'\
-          % (path), shell=True)
+          % (path), shell=True, cwd=generator.path)
       output = output.decode() if sys.version_info[0] == 3 else output
       commits = []
       for line in output.split('\n'):
